@@ -1,0 +1,411 @@
+\begin{theindex}
+
+  \item $\wedge {}$\textbf  , \hyperpage{7}
+  \item :::\textbf  , \hyperpage{7}
+  \item ::\textbf  , \hyperpage{7}
+  \item :\textbf  , \hyperpage{3}
+  \item ==\textbf  , \hyperpage{3}
+  \item ???\textbf  , \hyperpage{2}
+  \item ??\textbf  , \hyperpage{2}
+  \item ?Syntax\textbf  , \hyperpage{2}
+  \item ?\textbf  , \hyperpage{2}
+  \item \#\textbf  , \hyperpage{7}
+  \item \$\textbf  , \hyperpage{3}
+  \item \%>\%\textbf  , \hyperpage{8}
+  \item \%in\%\textbf  , \hyperpage{7}
+  \item \&\textbf  , \hyperpage{7}
+  \item \textbar {}\textbf  , \hyperpage{7}
+
+  \indexspace
+
+  \item a[1:X,-y]\textbf  , \hyperpage{3}
+  \item a[2,2]\textbf  , \hyperpage{3}
+  \item a\%*\%b\textbf  , \hyperpage{3}
+  \item abline\textbf  , \hyperpage{5}
+  \item ade4\textbf  , \hyperpage{8}
+  \item AIC\textbf  , \hyperpage{5}
+  \item anova\textbf  , \hyperpage{4}
+  \item apply\textbf  , \hyperpage{6}
+  \item apropos\textbf  , \hyperpage{2}
+  \item args\textbf  , \hyperpage{2}
+  \item arrange\textbf  , \hyperpage{8}
+  \item array\textbf  , \hyperpage{1}
+  \item as.character\textbf  , \hyperpage{4}
+  \item as.data.frame\textbf  , \hyperpage{3}
+  \item as.factor\textbf  , \hyperpage{3}
+  \item as.integer\textbf  , \hyperpage{3}
+  \item as.list\textbf  , \hyperpage{3}
+  \item as.matrix\textbf  , \hyperpage{3}
+  \item as.numeric\textbf  , \hyperpage{3}
+  \item as.tbl\_df\textbf  , \hyperpage{8}
+  \item attach\textbf  , \hyperpage{2}
+  \item attributes\textbf  , \hyperpage{2}
+  \item ave\textbf  , \hyperpage{4}
+
+  \indexspace
+
+  \item barplot\textbf  , \hyperpage{5}
+  \item bartlett.test\textbf  , \hyperpage{4}
+  \item baseenv\textbf  , \hyperpage{6, 7}
+  \item bg\textbf  , \hyperpage{6}
+  \item bmp\textbf  , \hyperpage{4}
+  \item body\textbf  , \hyperpage{6}
+  \item boxplot\textbf  , \hyperpage{5}
+  \item bptest\textbf  , \hyperpage{4}
+  \item breaks\textbf  , \hyperpage{6}
+  \item by\textbf  , \hyperpage{3}
+
+  \indexspace
+
+  \item c\textbf  , \hyperpage{3}
+  \item cati\textbf  , \hyperpage{8}
+  \item cbind\textbf  , \hyperpage{7}
+  \item cex\textbf  , \hyperpage{6}
+  \item character\textbf  , \hyperpage{2}
+  \item chisq.test\textbf  , \hyperpage{4}
+  \item class\textbf  , \hyperpage{2}
+  \item cm.colors\textbf  , \hyperpage{5}
+  \item col.lab\textbf  , \hyperpage{6}
+  \item col.main\textbf  , \hyperpage{6}
+  \item col\textbf  , \hyperpage{6}
+  \item colnames\textbf  , \hyperpage{3}
+  \item colors\textbf  , \hyperpage{5}
+  \item colSums\textbf  , \hyperpage{4}
+  \item complex\textbf  , \hyperpage{2}
+  \item coplot\textbf  , \hyperpage{5}
+  \item cor.test\textbf  , \hyperpage{4}
+  \item cor\textbf  , \hyperpage{4}
+  \item cummax\textbf  , \hyperpage{4}
+  \item cummin\textbf  , \hyperpage{4}
+  \item cumprod\textbf  , \hyperpage{4}
+  \item cumsum\textbf  , \hyperpage{4}
+  \item cut\textbf  , \hyperpage{3}
+
+  \indexspace
+
+  \item data.frame\textbf  , \hyperpage{1}
+  \item data\_frame\textbf  , \hyperpage{8}
+  \item dataframe\textbf  , \hyperpage{2}
+  \item deparse\textbf  , \hyperpage{6}
+  \item dev.off()\textbf  , \hyperpage{4}
+  \item dev.off\textbf  , \hyperpage{5}
+  \item diag\textbf  , \hyperpage{3}
+  \item diff\textbf  , \hyperpage{3, 4}
+  \item dim\textbf  , \hyperpage{3}
+  \item discrimin\textbf  , \hyperpage{8}
+  \item dist.binary\textbf  , \hyperpage{7}
+  \item diversity\textbf  , \hyperpage{8}
+  \item do.call\textbf  , \hyperpage{6}
+  \item dotchart\textbf  , \hyperpage{5}
+  \item dplyr\textbf  , \hyperpage{6}
+  \item drop\textbf  , \hyperpage{7}
+  \item dudi.acm\textbf  , \hyperpage{8}
+  \item dudi.coa\textbf  , \hyperpage{8}
+  \item dudi.hillsmith\textbf  , \hyperpage{8}
+  \item dudi.mix\textbf  , \hyperpage{8}
+  \item dudi.nsc\textbf  , \hyperpage{8}
+  \item dudi.pca\textbf  , \hyperpage{8}
+  \item dwtest\textbf  , \hyperpage{5}
+
+  \indexspace
+
+  \item edit\textbf  , \hyperpage{3}
+  \item eigen\textbf  , \hyperpage{3}
+  \item else\textbf  , \hyperpage{6}
+  \item emptyenv\textbf  , \hyperpage{6}
+  \item environment\textbf  , \hyperpage{6}
+  \item ERED\textbf  , \hyperpage{8}
+  \item eval\textbf  , \hyperpage{6}
+
+  \indexspace
+
+  \item factor\textbf  , \hyperpage{1, 2}
+  \item FD\textbf  , \hyperpage{8}
+  \item filter\textbf  , \hyperpage{8}
+  \item fix(obj)\textbf  , \hyperpage{3}
+  \item for\textbf  , \hyperpage{6}
+  \item foreach\textbf  , \hyperpage{6}
+  \item formals\textbf  , \hyperpage{6}
+  \item function\textbf  , \hyperpage{6}
+
+  \indexspace
+
+  \item gc\textbf  , \hyperpage{6}
+  \item GeoXp\textbf  , \hyperpage{8}
+  \item getAnywhere\textbf  , \hyperpage{2}
+  \item getwd\textbf  , \hyperpage{2}
+  \item gl\textbf  , \hyperpage{3}
+  \item glimpse\textbf  , \hyperpage{8}
+  \item glm\textbf  , \hyperpage{5}
+  \item globalenv\textbf  , \hyperpage{6}
+  \item grep\textbf  , \hyperpage{5}
+  \item grid\textbf  , \hyperpage{6}
+  \item group\_by\textbf  , \hyperpage{8}
+
+  \indexspace
+
+  \item head\textbf  , \hyperpage{2}
+  \item heat.colors\textbf  , \hyperpage{5}
+  \item help.start\textbf  , \hyperpage{2}
+  \item hist\textbf  , \hyperpage{5}
+  \item hmctest\textbf  , \hyperpage{4}
+
+  \indexspace
+
+  \item identical\textbf  , \hyperpage{2}
+  \item if\textbf  , \hyperpage{6}
+  \item ifelse\textbf  , \hyperpage{6}
+  \item install.packages\textbf  , \hyperpage{7}
+  \item installed.packages\textbf  , \hyperpage{7}
+  \item IQR\textbf  , \hyperpage{4}
+  \item is.data.frame\textbf  , \hyperpage{3}
+  \item is.matrix\textbf  , \hyperpage{3}
+  \item is.na\textbf  , \hyperpage{2}
+  \item is.numeric\textbf  , \hyperpage{3}
+  \item is.vector\textbf  , \hyperpage{3}
+
+  \indexspace
+
+  \item jitter\textbf  , \hyperpage{5}
+  \item jpeg\textbf  , \hyperpage{4, 5}
+
+  \indexspace
+
+  \item kruskal.test\textbf  , \hyperpage{4}
+  \item ks.test\textbf  , \hyperpage{4}
+
+  \indexspace
+
+  \item L\textbf  , \hyperpage{3}
+  \item lapply\textbf  , \hyperpage{6}
+  \item las\textbf  , \hyperpage{6}
+  \item layout.show\textbf  , \hyperpage{5}
+  \item layout\textbf  , \hyperpage{5}
+  \item legend\textbf  , \hyperpage{5}
+  \item length\textbf  , \hyperpage{4}
+  \item levels\textbf  , \hyperpage{3}, \hyperpage{7}
+  \item library\textbf  , \hyperpage{7}
+  \item lines\textbf  , \hyperpage{5}
+  \item list[[x]]\textbf  , \hyperpage{4}
+  \item list[x]\textbf  , \hyperpage{4}
+  \item list\$\textbf  , \hyperpage{4}
+  \item list\textbf  , \hyperpage{1--3}
+  \item lm\textbf  , \hyperpage{4}
+  \item locator\textbf  , \hyperpage{5}
+  \item log\textbf  , \hyperpage{7}
+  \item logical\textbf  , \hyperpage{2}
+  \item ls.str\textbf  , \hyperpage{6}
+  \item ls\textbf  , \hyperpage{6}
+  \item lty\textbf  , \hyperpage{6}
+  \item lwd\textbf  , \hyperpage{6}
+
+  \indexspace
+
+  \item m\$residuals\textbf  , \hyperpage{5}
+  \item main\textbf  , \hyperpage{6}
+  \item mar\textbf  , \hyperpage{6}
+  \item matplot\textbf  , \hyperpage{5}
+  \item matrix\textbf  , \hyperpage{1--3}
+  \item max\textbf  , \hyperpage{4}
+  \item mean\textbf  , \hyperpage{4}
+  \item median\textbf  , \hyperpage{4}
+  \item mem\_change\textbf  , \hyperpage{7}
+  \item mem\_used\textbf  , \hyperpage{7}
+  \item methods\textbf  , \hyperpage{2}
+  \item mget\textbf  , \hyperpage{2}
+  \item microbenchmark\textbf  , \hyperpage{7}
+  \item min\textbf  , \hyperpage{4}
+  \item mode\textbf  , \hyperpage{2}
+  \item mosaicplot\textbf  , \hyperpage{5}
+  \item MSG\textbf  , \hyperpage{5}
+
+  \indexspace
+
+  \item na.exclude\textbf  , \hyperpage{2}
+  \item na.fail\textbf  , \hyperpage{2}
+  \item na.omit\textbf  , \hyperpage{2}
+  \item NA\textbf  , \hyperpage{2}
+  \item names\textbf  , \hyperpage{8}
+  \item nchar\textbf  , \hyperpage{4}
+  \item ncol\textbf  , \hyperpage{3}
+  \item new.env\textbf  , \hyperpage{7}
+  \item next\textbf  , \hyperpage{6}
+  \item nlevels\textbf  , \hyperpage{3}
+  \item nrow\textbf  , \hyperpage{3}
+  \item NULL\textbf  , \hyperpage{7}
+  \item numeric\textbf  , \hyperpage{2}
+
+  \indexspace
+
+  \item object\_size\textbf  , \hyperpage{7}
+  \item OpenStreetMap\textbf  , \hyperpage{8}
+  \item order\textbf  , \hyperpage{3}
+  \item ordered\textbf  , \hyperpage{3}
+
+  \indexspace
+
+  \item pairs\textbf  , \hyperpage{5}
+  \item par()\textbf  , \hyperpage{6}
+  \item par\textbf  , \hyperpage{6}
+  \item parent.env\textbf  , \hyperpage{7}
+  \item parse\textbf  , \hyperpage{6}
+  \item paste\textbf  , \hyperpage{4}
+  \item PCA\textbf  , \hyperpage{8}
+  \item pch\textbf  , \hyperpage{6}
+  \item pd\textbf  , \hyperpage{8}
+  \item permatswap\textbf  , \hyperpage{6}, \hyperpage{8}
+  \item plot.3D\textbf  , \hyperpage{5}
+  \item plot\textbf  , \hyperpage{5}
+  \item plotnetwork\textbf  , \hyperpage{8}
+  \item png\textbf  , \hyperpage{4}
+  \item points\textbf  , \hyperpage{5}
+  \item polygones\textbf  , \hyperpage{5}
+  \item postscript\textbf  , \hyperpage{4}
+  \item predict\textbf  , \hyperpage{5}
+  \item proc.time()\textbf  , \hyperpage{7}
+  \item proc.time\textbf  , \hyperpage{7}
+
+  \indexspace
+
+  \item q()\textbf  , \hyperpage{7}
+  \item quantile\textbf  , \hyperpage{4}
+
+  \indexspace
+
+  \item rainbow\textbf  , \hyperpage{5}
+  \item rank\textbf  , \hyperpage{3}
+  \item raoD\textbf  , \hyperpage{8}
+  \item raw\textbf  , \hyperpage{2}
+  \item rbeta\textbf  , \hyperpage{5}
+  \item rbind\textbf  , \hyperpage{7}
+  \item rbinom\textbf  , \hyperpage{5}
+  \item rchisq\textbf  , \hyperpage{5}
+  \item read.csv\textbf  , \hyperpage{2}
+  \item read.delim\textbf  , \hyperpage{2}
+  \item read.table\textbf  , \hyperpage{2}
+  \item remove.packages\textbf  , \hyperpage{7}
+  \item rep\textbf  , \hyperpage{7}
+  \item repeat\textbf  , \hyperpage{6}
+  \item replicate\textbf  , \hyperpage{7}
+  \item require\textbf  , \hyperpage{7}
+  \item rev\textbf  , \hyperpage{3}
+  \item revdep\_check\_summary\textbf  , \hyperpage{7}
+  \item revdep\_check\textbf  , \hyperpage{7}
+  \item rexp\textbf  , \hyperpage{5}
+  \item rgamma\textbf  , \hyperpage{5}
+  \item rgb\textbf  , \hyperpage{5}
+  \item rlnorm\textbf  , \hyperpage{5}
+  \item rlogis\textbf  , \hyperpage{5}
+  \item rm\textbf  , \hyperpage{2}
+  \item rnorm\textbf  , \hyperpage{5}
+  \item round\textbf  , \hyperpage{7}
+  \item rownames\textbf  , \hyperpage{3}
+  \item rowSums\textbf  , \hyperpage{4}
+  \item rpois\textbf  , \hyperpage{5}
+  \item Rprof\textbf  , \hyperpage{7}
+  \item rt\textbf  , \hyperpage{5}
+  \item runif\textbf  , \hyperpage{5}
+  \item rwilcox\textbf  , \hyperpage{5}
+
+  \indexspace
+
+  \item s.value\textbf  , \hyperpage{7}
+  \item sample\textbf  , \hyperpage{5, 6}
+  \item sapply\textbf  , \hyperpage{6}
+  \item save.image\textbf  , \hyperpage{5}
+  \item save\textbf  , \hyperpage{4}
+  \item scale\textbf  , \hyperpage{7}
+  \item scan\textbf  , \hyperpage{3}
+  \item sd\textbf  , \hyperpage{4}
+  \item search\textbf  , \hyperpage{6}
+  \item segments\textbf  , \hyperpage{5}
+  \item select\textbf  , \hyperpage{8}
+  \item seq\textbf  , \hyperpage{3}
+  \item ses.pd\textbf  , \hyperpage{8}
+  \item sessionInfo\textbf  , \hyperpage{6}
+  \item setwd\textbf  , \hyperpage{2}
+  \item shapiro.test\textbf  , \hyperpage{4, 5}
+  \item solve\textbf  , \hyperpage{7}
+  \item sort\textbf  , \hyperpage{3}
+  \item sos\textbf  , \hyperpage{2}
+  \item source\textbf  , \hyperpage{2}
+  \item sp\textbf  , \hyperpage{8}
+  \item split\textbf  , \hyperpage{3}
+  \item sqrt\textbf  , \hyperpage{7}
+  \item stack\textbf  , \hyperpage{3}
+  \item str\textbf  , \hyperpage{2}
+  \item subset\textbf  , \hyperpage{3}
+  \item substr\textbf  , \hyperpage{4}
+  \item sum\textbf  , \hyperpage{4}
+  \item summarise\textbf  , \hyperpage{8}
+  \item summary\textbf  , \hyperpage{2--5}
+  \item sweep\textbf  , \hyperpage{3}
+  \item symbol\textbf  , \hyperpage{5}
+  \item Sys.getpid\textbf  , \hyperpage{7}
+
+  \indexspace
+
+  \item t(a)\textbf  , \hyperpage{3}
+  \item t.test\textbf  , \hyperpage{4}
+  \item t\textbf  , \hyperpage{3}
+  \item table.value\textbf  , \hyperpage{7}
+  \item table\textbf  , \hyperpage{3}, \hyperpage{7}
+  \item tag\textbf  , \hyperpage{8}
+  \item tagList\textbf  , \hyperpage{8}
+  \item tail\textbf  , \hyperpage{2}
+  \item tapply\textbf  , \hyperpage{6}
+  \item taxondive\textbf  , \hyperpage{8}
+  \item tclvalue\textbf  , \hyperpage{5}
+  \item text\textbf  , \hyperpage{5}
+  \item tiff\textbf  , \hyperpage{4}
+  \item traceback\textbf  , \hyperpage{7}
+  \item tracemem\textbf  , \hyperpage{7}
+  \item trophdiv\textbf  , \hyperpage{8}
+  \item type\textbf  , \hyperpage{6}
+  \item typeof\textbf  , \hyperpage{2}
+
+  \indexspace
+
+  \item unique\textbf  , \hyperpage{7}
+  \item unlist\textbf  , \hyperpage{4}
+  \item unstack\textbf  , \hyperpage{3}
+  \item update.packages\textbf  , \hyperpage{7}
+  \item updateR\textbf  , \hyperpage{7}
+
+  \indexspace
+
+  \item var.test\textbf  , \hyperpage{4}
+  \item var\textbf  , \hyperpage{4}
+  \item vec2col\textbf  , \hyperpage{5}
+  \item vector\textbf  , \hyperpage{1, 2}
+  \item Vegan\textbf  , \hyperpage{6}
+  \item vegdist\textbf  , \hyperpage{8}
+  \item View(obj)\textbf  , \hyperpage{3}
+
+  \indexspace
+
+  \item which.max\textbf  , \hyperpage{4}, \hyperpage{7}
+  \item which.min\textbf  , \hyperpage{4}
+  \item which\textbf  , \hyperpage{7}
+  \item while\textbf  , \hyperpage{6}
+  \item wilcox.test\textbf  , \hyperpage{4}
+  \item with\textbf  , \hyperpage{3}
+  \item write.table\textbf  , \hyperpage{4}
+
+  \indexspace
+
+  \item X11()\textbf  , \hyperpage{5}
+  \item X[X==0]\textbf  , \hyperpage{3}
+  \item xlab\textbf  , \hyperpage{6}
+  \item xlim\textbf  , \hyperpage{6}
+  \item xor\textbf  , \hyperpage{7}
+
+  \indexspace
+
+  \item Y[10]\textbf  , \hyperpage{3}
+  \item Y[Y\textless {}2]\textbf  , \hyperpage{3}
+  \item Y\textless {}2\textbf  , \hyperpage{3}
+  \item ylab\textbf  , \hyperpage{6}
+  \item ylim\textbf  , \hyperpage{6}
+
+\end{theindex}

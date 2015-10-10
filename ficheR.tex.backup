@@ -26,8 +26,6 @@
 \usepackage[hidelinks]{hyperref}
 \hypersetup{linkcolor=black, colorlinks=TRUE, urlcolor=cyan }
 
-\usepackage{suffix} %pour la version étoilée de grasindex
-
 \hypersetup{
 pdftitle = {Fiche de commande R},
 pdfsubject = {Fiche de commande R},
@@ -75,15 +73,21 @@ pdfcreator = {\LaTeX\ with package \flqq hyperref\frqq},
 \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% mise en page de l'index%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% cuisine de mise en page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%Version simple ou avancée %%
 \newif\ifadvanced
-\advancedtrue  % set \advancedtrue pour la fiche avancée \advancedfalse pour la fiche simple
+\advancedfalse  % set \advancedtrue pour la fiche avancée \advancedfalse pour la fiche simple
 
 \makeindex
 \newcommand{\grasindex}[1]{\textbf{#1} \index{#1\textbf}}
-\newcommand{\grasindex*}[1]{\textit{#1} \index{#1\textbf}}
+\newcommand{\important}[1]{\textbf{#1} \index{\textbf{#1}}}
+\newcommand{\bu}[0]{\ifadvanced \else \hspace*{-1mm}$\bigstar$ \hspace*{0.15mm}\fi}
 \newcommand{\adv}[1]{\ifadvanced #1 \fi}
 
 
@@ -110,8 +114,8 @@ pdfcreator = {\LaTeX\ with package \flqq hyperref\frqq},
 }
 
 \tableofcontents
+\vfill
 \rule{8cm}{1.5pt}
-\adv{\newpage}
 
 \setlength{\parindent}{-0.3cm}
 
@@ -213,23 +217,23 @@ Le répertoire de travail est différent de les environnements\ref{EnvSesDeb} de
 
 \grasindex{getAnywhere}(fonction) \quad Recherche la fonction plus en profondeur dans les code que les points d'interrogation. Permet par exemple de retrouver des fonctions internes non documentées.
 
-\grasindex{args}(fonction) \quad Liste les arguments d'une fonction
+\grasindex{args}(fonction) \quad Liste les arguments d'une fonction. \adv{\textit{cf} aussi \label{CreaGestFonct}}
 
 \subsection{Objet}
 
-\grasindex{class}(obj) \label{class} \quad donne la classe de l'objet obj. 5 classes principales: \grasindex{vector}, \grasindex{factor}, \grasindex{matrix} (un seul type de colonne), \grasindex{dataframe} (plusieurs types de colonne) et \grasindex{list}.
+\bu\important{class}(obj) \label{class} \quad donne la classe de l'objet obj. 5 classes principales: \grasindex{vector}, \grasindex{factor}, \grasindex{matrix} (un seul type de colonne), \grasindex{dataframe} (plusieurs types de colonne) et \grasindex{list}.
 
-\grasindex{mode}(obj) \label{mode} \quad donne le mode de l'objet obj. 5 modes principaux: \grasindex{numeric}, \grasindex{character}, \grasindex{logical}, \grasindex{complex} et \grasindex{raw}.
+\bu\important{mode}(obj) \label{mode} \quad donne le mode de l'objet obj. 5 modes principaux: "integer \grasindex{numeric}, \grasindex{character}, \grasindex{logical}, \grasindex{complex} et \grasindex{raw}.
 
-\adv{ \grasindex{typeof}(obj) \quad donne le mode de stockage interne de l'objet obj. Pour connaître le mode de stockage de chaque colonne d'un dataframe: \textbf{sapply(obj, typeof)}}
+\adv{ \grasindex{typeof}(obj) \quad donne le mode de stockage interne de l'objet obj. Permet par exemple de différencier les nombres entiers (\textsc{integer}) des nombres à virgules (\textsc{double}) Pour connaître le mode de stockage de chaque colonne d'un dataframe: \textbf{sapply(obj, typeof)} }
 
-\grasindex{str}(obj) \quad donne la structure interne de l'objet obj de façon concise, très utile dans le cas d'objet complexe
+\bu\important{str}(obj) \quad donne la structure interne de l'objet obj de façon concise. Très utile dans le cas d'objet complexe
 
 \grasindex{attributes}(obj) \quad donne les différentes structures de l'objet obj (\textit{\textit{cf}} aussi str())
 
 \grasindex{summary}(obj) \quad résumé de l'objet selon sa classe
 
-\grasindex{head}(a, x)  \quad affiche les x premières lignes de la matrice
+\bu\important{head}(a, x)  \quad affiche les x premières lignes de la matrice
 
 \grasindex{tail}(a, x)  \quad affiche les x dernières lignes de la matrice
 
@@ -260,9 +264,7 @@ Le répertoire de travail est différent de les environnements\ref{EnvSesDeb} de
 
 \grasindex{NA} \quad Donnée manquantes (Not Available) 
 
-\grasindex{is.na}(a)  \quad Demande si la matrice (ou un autre objet) contient des NA
-
-\grasindex{na.fail}(a)  \quad 
+\grasindex{is.na}(a)  \quad Demande si la matrice (ou un autre objet) contient des données manquantes (NA). \grasindex{na.fail}(a) teste pour la présence de \textsc{NA}.
 
 \grasindex{na.omit}(X) /  \grasindex{na.exclude}(X) /  \textbf{a[!is.na(a)]}  \quad supprime les informations manquantes (trois méthodes quasiment équivalentes, attention à vérifier le résultat de ces fonctions parfois capricieuses)
 
@@ -271,17 +273,17 @@ Le répertoire de travail est différent de les environnements\ref{EnvSesDeb} de
 
 \subsubsection{sur le fichier}
 
-\grasindex{nrow}(nomdefichier)  \quad nombre de lignes du fichier
+\bu\important{nrow}(nomdefichier)  \quad nombre de lignes du fichier
 
-\grasindex{rownames}(a)\textless{}-rownames(b)  \quad on renomme les lignes de a comme les lignes de b
+\bu\important{ncol}(nomdefichier)  \quad nombre de colonnes du fichier
 
-\grasindex{ncol}(nomdefichier)  \quad nombre de colonnes du fichier
+\bu\important{rownames}(a)\textless{}-rownames(b)  \quad on renomme les lignes de a comme les lignes de b
 
-\grasindex{colnames}(a)\textless{}-colnames(b)  \quad on renomme les colonnes de a comme les colonnes de b
+\bu\important{colnames}(a)\textless{}-colnames(b)  \quad on renomme les colonnes de a comme les colonnes de b
 
-\grasindex{dim}(a) donne les dimensions du vecteur  \quad \textbar{} d'une matrice
+\bu\important{dim}(a) donne les dimensions du vecteur  \quad \textbar{} d'une matrice
 
-\grasindex{edit}(objet)  \quad ouvre le tableau du fichier, attention refermer avant de continuer (\textit{cf} aussi \grasindex{View()} et \grasindex{fix())}
+\grasindex{edit}(obj)  \quad ouvre le tableau du fichier, attention refermer avant de continuer (\textit{cf} aussi \grasindex{View(obj)} et \grasindex{fix(obj)}
 
 
 
@@ -291,9 +293,9 @@ X\textless{}-\grasindex{seq}(from=1, to=100, by=1) \quad  formation de vecteur a
 
 X\textless{}-\grasindex{seq}(from=1, to=100, lenght=100)  \quad formation de vecteur allant de 1 à 100 avec 100 valeurs/nombres équidistant(e)s
 
-X\textless{}-\grasindex{c}(a, b, c, d)  \quad affecte les valeurs au vecteur X , \grasindex{c}= concatener
+\bu X\textless{}-\important{c}(a, b, c, d)  \quad affecte les valeurs au vecteur X , \grasindex{c}= concatener
 
-Y\textless{}-\grasindex{c}(1\grasindex{:}10)  \quad affecte valeurs entière de 1 à 10
+\bu Y\textless{}-\grasindex{c}(1\important{:}10)  \quad affecte valeurs entière de 1 à 10
 
 \grasindex{Y[10]}  \quad affiche la dixième valeur du vecteur Y
 
@@ -309,15 +311,15 @@ Y\textless{}-\grasindex{c}(1\grasindex{:}10)  \quad affecte valeurs entière de 
 
 X\textless{}-1\textasciicircum{}(0\grasindex{:}5)  \quad donne au vecteur X les valeurs 1\textasciicircum{}0, 1\textasciicircum{}1 ... 1\textasciicircum{}5
 
-\grasindex{sort}(X, decreasing=T)  \quad ordonne les éléments de X (un vecteur ou un facteur), decreasing permet de choisir le sens du tri 
+\grasindex{sort}(X, decreasing=T)  \quad ordonne les éléments de X (un vecteur ou un facteur), \textsc{decreasing} permet de choisir le sens du tri 
 
-\grasindex{order}(a) \quad  donne les coordonnées du plus petit élément de a puis du deuxième, ect. order() peut aussi être utiliser pour un ou plusieurs vecteurs
+\bu\important{order}(a) \quad  donne les coordonnées du plus petit élément de a puis du deuxième, ect... 
 
 \grasindex{rev}(X)  \quad renverse les éléments du vecteur. Pour une matrice: \grasindex{t(a)}
 
 \grasindex{rank}(X)  \quad donne les rangs des éléments de X
 
-\adv{\grasindex{diff}(X)  \quad différences entre les élts consécutifs de X}
+\adv{\grasindex{diff}(X)  \quad différences entre les éléments consécutifs de X}
 
 \grasindex{is.numeric}() et \grasindex{as.numeric}()  \quad demande ou change le vecteur en numérique. Attention à vérifier votre vecteur après l'utilisation de cette fonction qui modifie parfois les valeurs de vos données
 
@@ -334,7 +336,7 @@ a\textless{}-\grasindex{matrix}(y, nrow=5, ncol=2)  \quad transforme vecteur y e
 
 \grasindex{a[2,2]}  \quad affiche l'élément de a de ligne 2 et de colonne 2
 
-\textbf{a\$nomcol1 = a[, nomcol1]=X}  \quad affiche les éléments de a de la colonne nommé nomcol1
+\bu\textbf{a\important{\$}nomcol1} \quad affiche les éléments de a de la colonne nommé nomcol1, équivalent à \textbf{a[, nomcol1]=X} 
 
 \textbf{a[,-1]}  \quad affiche toutes les colonnes de a sauf la colonne 1
 
@@ -346,31 +348,33 @@ b\textless{}- matrix(0, nrow=3, ncol=2)  \quad création d'une matice b à 3 lig
 
 \grasindex{t}(a)  \quad transpose la matrice a (lignes deviennent colonnes et réciproquement)
 
-\grasindex{subset}(a, X!=0, select=)  \quad donne une sous division de la matrice a pour laquelle la 1ère colonne est différente de 0, select permet de sélectionner les colonnes concernées. Fonctionne aussi sur les dataframes.
+\bu\important{subset}(a, X!=0)  \quad donne une sous division de la matrice (ou d'un df) a pour laquelle la 1ère colonne est différente de 0; l'option \textsc{select} permet de sélectionner les colonnes concernées. 
 
-\adv{\grasindex{diag}(10) \quad  matrice identité de dimension 10*10}
+\adv{
+  \grasindex{diag}(x, nrow, ncol)  \quad donne une matrice de dimension nrow*ncol diagonalisée par la valeur de x. \grasindex{diag}(10) donne la matrice identité de dimension 10*10. 
 
-\adv{\grasindex{diag}(x, nrow, ncol)  \quad donne une matrice de dimension nrow*ncol diagonalisée par la valeur de x}
+  \grasindex{a\%*\%b}  \quad multiplication matricielle
 
-\adv{\grasindex{a\%*\%b}  \quad multiplication matricielle}
+  \grasindex{eigen}(a)  \quad valeurs propres et vecteurs propres de la matrice a
 
-\adv{\grasindex{eigen}(a)  \quad valeurs propres et vecteurs propres de la matrice a}
+  \grasindex{sweep}\textbf{(a, margin= 1, STATS = rowSums(a), FUN="/")}  \quad divise (on peut modifier la fonction FUN) chaque valeur de la matrice a par la moyenne par ligne (on peut modifier rowSums par une autre fonction), margin donne la dimension (\textit{e.g.} 1=ligne et 2= colonne) sur laquelle s'applique la fonction  
+}
 
-\adv{\grasindex{sweep}\textbf{(a, margin= 1, STATS = rowSums(a), FUN="/")}  \quad divise (on peut modifier la fonction FUN) chaque valeur de la matrice a par la moyenne par ligne (on peut modifier rowSums par une autre fonction), margin donne la dimension (\textit{e.g.} 1=ligne et 2= colonne) sur laquelle s'applique la fonction  }
+\subsubsection{sur un dataframe (df)}
 
-\subsubsection{sur un dataframe}
+\grasindex{as.data.frame}(a)  \quad change la matrice a en un df \textit{cf}  \textgreater{} methode(as)
 
-\grasindex{as.data.frame}(a)  \quad change la matrice a en un data.frame \textit{cf}  \textgreater{} methode(as)
-
-\grasindex{is.data.frame}(a) \quad  est ce que a est un data frame? \textit{cf}  \textgreater{} methode(is)
+\grasindex{is.data.frame}(a) \quad  est ce que a est un df? \textit{cf}  \textgreater{} methode(is)
 
 \grasindex{summary}(as.dataframe(a)) \quad  donne le résumé statistique (min, max, µ...) par colonne
 
-\grasindex{split}(df, fact)  \quad sépare le dataframe df selon les modalités de fact
+\bu\important{split}(df, fact)  \quad sépare df selon les modalités de fact
 
-\adv{\grasindex{stack}(df) \quad  transforme un dataframe à plusieurs colonnes en un dataframe avec seulement 2 colonnes. Les valeurs du dataframe obtenu correspond aux noms des variables dans le premier dataframe. Essayez, c'est très simple. \grasindex{unstack} est la fonction inverse.}
-
-\adv{\grasindex{with}(df, sum(X)) \quad évalue une fonction à l'intérieur d'un data.frame. Permet de ne pas nommer en entier les noms des variables. Dans cette exemple on calcul la somme de la colonne nommée X dans le data.frame.}
+\adv{
+  \grasindex{stack}(df) \quad  transforme un df à plusieurs colonnes en un df avec seulement 2 colonnes. Les valeurs du df obtenu correspond aux noms des variables dans le premier df. Essayez, c'est très simple. \grasindex{unstack} est la fonction inverse.
+  
+  \grasindex{with}(df, sum(X)) \quad évalue une fonction à l'intérieur d'un data.frame. Permet de ne pas nommer en entier les noms des variables. Dans cette exemple on calcul la somme de la colonne nommée X dans le data.frame.
+}
 
 
 \subsubsection{sur un facteur}
@@ -385,9 +389,9 @@ b\textless{}- matrix(0, nrow=3, ncol=2)  \quad création d'une matice b à 3 lig
 
 \grasindex{nlevels}(fact)  \quad donne le nombre de modalités du facteur fact
 
-\grasindex{levels}(fact)  \quad donne les modalités du facteur fact
+\bu\important{levels}(fact)  \quad donne les modalités du facteur fact
 
-\grasindex{table}(fact)  \quad retourne une table des valeurs
+\bu\important{table}(fact)  \quad retourne une table des valeurs. \grasindex{table}(fact1, fact2) donne la matrice d'association entre les deux facteurs 
 
 \grasindex{ordered}(fact)  \quad transforme un facteur en facteur ordonné
 
@@ -399,16 +403,14 @@ b\textless{}- matrix(0, nrow=3, ncol=2)  \quad création d'une matice b à 3 lig
 
 \grasindex{by}(X,fact,median)  \quad applique la fonction médiane par modalité fact sur le vecteur X (\textit{cf} la fonction tapply)
 
-\grasindex{table}(fact1, fact2)  \quad donne la matrice d'association entre les deux facteurs 
-
 
 \subsubsection{sur une liste}
 
-\grasindex{list}(obj1,obj2) \quad  produit une liste avec les objets
+\bu\important{list}(obj1,obj2) \quad  produit une liste avec les objets
 
 \grasindex{as.list}(a) \quad  transforme la matrice a en une liste
 
-\grasindex{list[1]}  \quad extraction de la 1ère valeur de la 1ère composante de la liste
+\grasindex{list[x]}  \quad extraction de la xéme valeur de la liste en commencant par la 1ère composante.
 
 \grasindex{list[[x]]}  \quad extraction de la xéme composante de la liste.
 
@@ -446,21 +448,21 @@ b\textless{}- matrix(0, nrow=3, ncol=2)  \quad création d'une matice b à 3 lig
 
 \adv{\grasindex{cumsum}(X), \grasindex{cumprod}(X), \grasindex{cummin}(X), \grasindex{cummax}(X)  \quad somme, produit, minimum ou maximum cumulé du vecteur X}
 
-\grasindex{mean}(X)  \quad moyenne de X
+\bu\important{mean}(X)  \quad moyenne de X
 
 \adv{\grasindex{ave}(X, fact) \quad  moyenne de X par modalité de fact. \textit{cf} tapply pour plus d'option de calcul par modalité}
 
-\grasindex{sd}(X)  \quad écart type de X
+\bu\important{sd}(X)  \quad écart type de X
 
 \grasindex{var}(X) \quad  variance de X
 
-\grasindex{max}(X)  \quad valeur max de X \adv{pmax est la version vectorisée de max}
+\bu\important{max}(X)  \quad valeur max de X \adv{pmax est la version vectorisée de max}
 
-\grasindex{min}(X)  \quad valeur min de X \adv{pmin est la version vectorisée de max}
+\bu\important{min}(X)  \quad valeur min de X \adv{pmin est la version vectorisée de max}
 
 \grasindex{summary}(X)  \quad quartiles, médiane, moyenne et valeurs extrèmes du vecteur
 
-\grasindex{length}(X) \quad  taille d'un vecteur
+\bu\important{length}(X) \quad  taille d'un vecteur
 
 \grasindex{median}(X)  \quad médiane du vecteur X
 
@@ -510,7 +512,7 @@ Si je rejette H0, je la rejette avec un risque de p-value de me tromper (p-value
 
 \subsection{Modèles linéaires}
 
-m\textless{}-\grasindex{lm}(x\texttildelow y)  \quad donne un modèle linéaire
+\bu m\textless{}-\important{lm}(x\texttildelow y)  \quad donne un modèle linéaire
 \textbf{Y~X1+X2}  \quad la valeur yi expliquée par x1i et x2i 
 \textbf{Y~X1*X2 = Y~X1+X2+X1:X2}  \quad la valeur yi expliquée par x1i, x2i et l'interaction x1i*x2i 
 \textbf{Y~X1\%in\%X2}  \quad la valeur yi expliquée par x1i nidé, imbriqué, dans x2i
@@ -542,7 +544,7 @@ y \textless{}-data.frame(temps=c(15, 19))   \textit{puis} \grasindex{predict}(m,
 Remarque: Toutes les fonctions commençant par r peuvent être utilisées en remplaçant la lettre r (Tirage aléatoire de x valeurs) par d (fonction de densité), p (fonction de probabilités cumulés) et q (valeur des quantiles). Il existe d'autres distributions dont: Poisson (\grasindex{rpois}), Gamma (\grasindex{rgamma}), Beta (\grasindex{rbeta}), Student et Fischer-Snedecor si 2 ddl (\grasindex{rt}), Uniform (\grasindex{runif}), Wilcox (\grasindex{rwilcox}), Logistique (\grasindex{rlogis}), Lognormal (\grasindex{rlnorm})...
 \\
 
-\grasindex{rnorm}(x, 0, 1)  \quad donne x valeurs tirées au hasard  d'une loi normale centrée réduite suivant µ=0 et var=1
+\bu\important{rnorm}(x, 0, 1)  \quad donne x valeurs tirées au hasard  d'une loi normale centrée réduite suivant µ=0 et var=1
 
 \grasindex{rbinom}(x, 90, 0.5)  \quad donne x valeurs tirées au hasard d'une loi binomiale à 90 tirages (n) et une proba (p) de 0.5
 
@@ -550,7 +552,7 @@ Remarque: Toutes les fonctions commençant par r peuvent être utilisées en rem
 
 \grasindex{rexp}(x, rate=1)  \quad donne x valeurs tirées au hasard d'une loi exponentielle de taux 1
 
-\grasindex{sample}(X)  \quad permutation aléatoire des élément du vecteur x. L'argument \textsc{replace} permet de choisir un tirage avec ous sans remise.
+\bu\important{sample}(X)  \quad permutation aléatoire des élément du vecteur x. L'argument \textsc{replace} permet de choisir un tirage avec ous sans remise.
 
 \adv{\grasindex{jitter}(X)  \quad rajoute du bruit à une variable}
 
@@ -570,15 +572,21 @@ Remarque: Toutes les fonctions commençant par r peuvent être utilisées en rem
 
 \subsection{diagramme de dispersion}
 
-\grasindex{plot}(X \texttildelow Y, option cf plus bas)  \quad affiche le diagramme de dispersion de X en fonction de la Y
+\bu\important{plot}(X \texttildelow Y, option cf plus bas)  \quad affiche le diagramme de dispersion de X en fonction de la Y
 
-\grasindex{abline}(h=x)  \quad ajoute sur la fenêtre graphique une ligne horizontal (v=x pour une ligne vertical) d'ordonné x
+\bu\important{points}(abscisse, ordonnée)  \quad pour rajouter des points sur un même graphique
+
+\bu\important{lines}(X \texttildelow Y)  \quad rajoute une ligne sur le graphique courant
+
+\bu\important{abline}(h=x)  \quad ajoute sur la fenêtre graphique une ligne horizontal (v=x pour une ligne vertical) d'ordonné x
 
 \grasindex{abline}(a=3, b=2)  \quad ajoute sur la fenêtre graphique une ligne d'équation y=ax+b ici y=3x+2
 
 \grasindex{abline}(m)  \quad ajoute la droite de régression du modèle linéaire
 
-\grasindex{lines}(X \texttildelow Y)  \quad rajoute une ligne sur le graphique courant
+\grasindex{polygones}(X, Y) \quad rajoute des polygones sur le graphique courant
+
+\grasindex{segments}(X0, Y0, X1, Y1) \quad rajoute sur le graphique courant des segments entre les points de coordonnées (X0, Y0) et (X1, Y1)
 
 \grasindex{legend}(x, y, legend=``ma légende'')  \quad rajoute une légende sur le graphique courant
 
@@ -586,25 +594,21 @@ Remarque: Toutes les fonctions commençant par r peuvent être utilisées en rem
 
 \adv{\grasindex{symbol}(X, Y) \quad rajoute des symboles sur le graphique courant}
 
-\grasindex{points}(abscisse, ordonnée)  \quad pour rajouter des points sur un même graphique
-
 \adv{\grasindex{matplot}(a,b)  \quad plot des colonnes de a en fonction des colonnes de b}
 
 \adv{\grasindex{coplot}(Y~X1 \textbar{} X2)  \quad plot de y en fonction de X1 conditionnellement à X2}
-
-\grasindex{polygones}(X, Y) \quad rajoute des polygones sur le graphique courant
 
 \grasindex{pairs}(a) \quad représente chaque combinaison de variable issue de la matrice a.
 
 \subsection{autres graphiques}
 
-\grasindex{boxplot}(x)  \quad boites à moustaches (médiane, quartiles, limites de la distribution sans les outliers (dépend de la variance), valeurs dans les choux)
+\bu\important{boxplot}(x)  \quad boites à moustaches (médiane, quartiles, limites de la distribution sans les outliers (dépend de la variance), valeurs dans les choux)
 
-\grasindex{barplot}(a, besides=T, add=T)  \quad si besides =T: barre cumulé; add=T: ajout au précédent plot
+\bu\important{barplot}(a, besides=T, add=T)  \quad si besides =T: barre cumulé; add=T: ajout au précédent plot
 
 \grasindex{dotchart}(X) \quad Cleveland dotchart, alternative au barplot
 
-\grasindex{hist}(X, col=\#'6caractères et 2 chiffres d'opacité de 0 à 99', xlim=c(2, 5), ylim=(15, 17), add=T, br=10 , freq=F)  \quad donne l'histogramme d'un vecteur de couleur choisie sur l'intervalle choisie, add=T signifie que l'on ajoute le diagramme sur celui déjà existant, br (break) donne le nombre de séparations à représenter sur l'histogramme (ici 10, par défault utilise la formule de Sturges pour calculer le nombre de classes), freq=F pour obtenir les fréquences relatives plutôt que les fréquences absolues
+\bu\important{hist}(X, col=\#'6caractères et 2 chiffres d'opacité de 0 à 99', xlim=c(2, 5), ylim=(15, 17), add=T, br=10 , freq=F)  \quad donne l'histogramme d'un vecteur de couleur choisie sur l'intervalle choisie, add=T signifie que l'on ajoute le diagramme sur celui déjà existant, br (break) donne le nombre de séparations à représenter sur l'histogramme (ici 10, par défault utilise la formule de Sturges pour calculer le nombre de classes), freq=F pour obtenir les fréquences relatives plutôt que les fréquences absolues
 
 \grasindex{plot.3D}()  \quad représentation tri-variées, peut également être représenté par la fonction plot normale en définissant la taille des points proportionnelle à la troisième variable (cex=var3 ou cex=log(var3))
 
@@ -619,7 +623,7 @@ Remarque: Toutes les fonctions commençant par r peuvent être utilisées en rem
 
 \grasindex{cm.colors}(x) \quad  donne x valeurs de couleurs froides
 
-\grasindex{rgb}(0,0,1,0.5)  \quad donne une couleur avec le premier chiffre (entre 0 et 1) donne la quantité de rouge, le deuxième la quantité de vert, le troisème de bleu et le dernier donne l'opacité. Ici il s'agit d'un bleu moyennement transparent 
+\bu\important{rgb}(0,0,1,0.5)  \quad donne une couleur avec le premier chiffre (entre 0 et 1) donne la quantité de rouge, le deuxième la quantité de vert, le troisème de bleu et le dernier donne l'opacité. Ici il s'agit d'un bleu moyennement transparent 
 
 \grasindex{colors}()  \quad liste des couleurs: '6 caractères et 2 chiffres d'opacité de 0 à 99'
 
@@ -632,7 +636,9 @@ Remarque: Toutes les fonctions commençant par r peuvent être utilisées en rem
 
 \subsection{Personnalisation des graphiques}
 
-Pour connaitre la plupart des paramètres graphiques: taper \grasindex{?par}
+Pour connaître la plupart des paramètres graphiques: taper \textbf{?par}. 
+
+\bu\important{par()} \quad  renvoie la liste de tous les paramètres. \textbf{oldpar \textless{}- par()} : sauvegarde le paramétrage courant dans la variable oldpar, \textbf{par(cex = oldpar\$cex)}   rétablit le paramètre cex à la valeur précédemment sauvegardée dans oldpar.
  
 \grasindex{lty}\textbf{= 1, 2 ...}  \quad type de ligne (continue, pointillée ...)
 
@@ -670,7 +676,7 @@ Pour connaitre la plupart des paramètres graphiques: taper \grasindex{?par}
 
 \subsection{boucle}
 
-\grasindex{for}\textbf{(i in 1 : x) \{ commandes\}}  \quad formation d'une boucle de pas 1 qui va de 1 au nombre x et qui applique les commandes à chaque boucle 
+\bu\important{for}\textbf{(i in 1 : x) \{ commandes\}}  \quad formation d'une boucle de pas 1 qui va de 1 au nombre x et qui applique les commandes à chaque boucle 
 
 \textbf{res <- vector(NA, x) for (i in 1 : x) \{res[i] \textless{}- f(x) \}}  \quad stockage résultats à chaque tour de boucle dans le vecteur \textit{res}. Notez l'initialisation du vecteur res à la bonne taille qui permet de gagner en performance.
 
@@ -683,7 +689,7 @@ Pour connaitre la plupart des paramètres graphiques: taper \grasindex{?par}
 }
 
 
-\subsection{Création de fonction}
+\subsection{Création et gestion de fonction}\label{CreaGestFonct}
 
 \adv{
   Les arguments de fonction sont cherchés d'abord par un match exacte du nom, puis par un match partiel et enfin par la position.
@@ -692,9 +698,9 @@ Pour connaitre la plupart des paramètres graphiques: taper \grasindex{?par}
 
 \textbf{nomf° \textless{}-} \grasindex{function}\textbf{(ech.1, ech.2) \{ x\textless{}-mean(ech.1) - mean(ech.2) return(x) \}}  \quad Fabriquer une fonction
 
-\grasindex{if}(condition)  \{action1\}   \grasindex{else}  \{action2\}  \quad si la condition est respecté-\textgreater{}action1 sinon -\textgreater{}action 2
+\bu\important{if}(condition)  \{action1\}   \grasindex{else}  \{action2\}  \quad si la condition est respecté-\textgreater{}action1 sinon -\textgreater{}action 2
 
-\grasindex{ifelse}(test,oui,non)  \quad Version vectorisée de if fait un test renvoie la première valeur si test vrai (ici ``oui'') et deuxième valeur si test faux (ici ``non'')
+\bu\important{ifelse}(test, ``oui'', ``non'')  \quad Version vectorisée de \textsc{if} fait un test renvoie la première valeur si test vrai (ici ``oui'') et deuxième valeur si test faux (ici ``non'')
 
 \adv{
   \grasindex{while}(condition) \{commandes\}  \quad boucle la commande tant que la condition est vrai
@@ -733,14 +739,13 @@ Pour connaitre la plupart des paramètres graphiques: taper \grasindex{?par}
 \\
 }
 
+\bu\important{tapply}(X, fact, mean)  \quad on coupe le vecteur X en autant de morceaux que de valeurs que prend le vecteur fact et on demande une stat (ici la µ) par groupe
+
+\bu\important{apply}(a, 1, mean)  \quad moyenne des lignes (remplacer 1 par 2 pour les colonnes) de la matrice a
+
+\bu\important{lapply}(liste, mean)  \quad application de la fonction (ici la moyenne) à chaque composante de la liste \adv{df[] <- lapply(liste, mean) stocke les résultats dans le dataframe df}
 
 \textbf{apply(a, 1, function(x) tapply(x, fact, var) )}  \quad applique la fonction x (ici variance pour chaque groupe définis par le facteur fact) aux lignes de la matrice a (remplacer 1 par 2 pour les colonnes) 
-
-\grasindex{tapply}(X, fact, mean)  \quad on coupe le vecteur X en autant de morceaux que de valeurs que prend le vecteur fact et on demande une stat (ici la µ) par groupe
-
-\grasindex{apply}(a, 1, mean)  \quad moyenne des lignes (remplacer 1 par 2 pour les colonnes) de la matrice a
-
-\grasindex{lapply}(liste, mean)  \quad application de la fonction (ici la moyenne) à chaque composante de la liste \adv{df[] <- lapply(liste, mean) stocke les résultats dans le dataframe df}
 
 \adv{
   \grasindex{sapply} \quad identique à lapply mais retourne un vecteur ou une matrice plutôt qu'une liste. \textit{cf} aussi les fonctions \textbf{mapply} et \textbf{vapply}
@@ -764,7 +769,7 @@ Pour connaitre la plupart des paramètres graphiques: taper \grasindex{?par}
 
 \grasindex{sessionInfo}() \quad liste les informations sur la session en cours
 
-\grasindex{traceback}() \quad donne la séquence de commandes qui a amené à la dernière erreur
+\bu\important{traceback}() \quad donne la séquence de commandes qui a amené à la dernière erreur
 
 \adv{
   \grasindex{new.env}(parent=\grasindex{baseenv}()) \quad  définit un nouvelle environnement dont le parent est l'environnement de base
@@ -799,7 +804,7 @@ Pour connaitre la plupart des paramètres graphiques: taper \grasindex{?par}
 
 \grasindex{sqrt}(x)  \quad racine de x
 
-\textbf{x $\wedge{}$ y} \quad  x à la puissance y
+x \grasindex{$\wedge{}$} y \quad  x à la puissance y
 
 \grasindex{log}(x, base=y) \quad logarithme de x à la base y
 
@@ -810,15 +815,15 @@ Pour connaitre la plupart des paramètres graphiques: taper \grasindex{?par}
 \grasindex{round}(x, 3)  \quad arrondi le nbre x de 3 chiffres après la virgule
 
 
-\section{Condition logique et selection de données}
+\section{Condition logique et sélection de données}
 
 \grasindex{rep}(c(TRUE, FALSE),50)  \quad répète 50 fois TRUE et FALSE, on peut aussi utiliser rep() avec des nombres bien entendu
 
 \grasindex{table}[a[,3]==1]  \quad donne le nombre de ligne où a[,3] est bien égale à 1 (TRUE) et le nombre de FALSE
 
-\grasindex{\&} \quad  ET logique 
+\bu\important{\&} \quad  ET logique 
 
-\grasindex{\textbar{}}  \quad (alt-gr 6) OU logique
+\bu\important{\textbar{}}  \quad (alt-gr 6) OU logique
 
 \adv{\grasindex{xor} \quad  OU exclusif}
 
@@ -834,8 +839,7 @@ Pour connaitre la plupart des paramètres graphiques: taper \grasindex{?par}
 
 \section{Divers}
 
-
-\grasindex{rbind}(X, Y) et \grasindex{cbind}((X, Y))  \quad fusionne les deux vecteurs en une matrice à 2 lignes (ou 2 colonnes); peut s'appliquer avec une matrice
+\bu\important{rbind}(X, Y) et \important{cbind}((X, Y))  \quad fusionne les deux vecteurs en une matrice à 2 lignes (ou 2 colonnes); peut s'appliquer avec une matrice
 
 \grasindex{levels}(a\$attr) \quad  donne les attributs de la variables atrr de la matrice a
 
@@ -843,13 +847,11 @@ Pour connaitre la plupart des paramètres graphiques: taper \grasindex{?par}
 
 \grasindex{NULL}  \quad vierge
 
-\grasindex{par()} \quad  renvoie la liste de tous les paramètres. \textbf{oldpar \textless{}- par()} : sauvegarde le paramétrage courant dans la variable oldpar, \textbf{par(cex = oldpar\$cex)}   rétablit le paramètre cex à la valeur précédemment sauvegardée dans oldpar.
-
-\grasindex{\#}  \quad après un dièse ont peut ajouter un commentaire dans le script. Toutes les lettres après ce signe seront ignorer par R
+\bu\important{\#}  \quad après un dièse ont peut ajouter un commentaire dans le script. Toutes les lettres après ce signe seront ignorer par R
 
 \grasindex{!} \quad non
 
-\grasindex{!=} \quad différent 
+\bu\important{!=} \quad différent 
 
 \grasindex{unique}(a) \quad supprime les éléments dupliquer
 
@@ -868,9 +870,9 @@ De nombreuses \textsc{Task View} permettent de connaitre les packages disponible
 
 \subsection{Gestion des packages}
 
-\grasindex{install.packages}("package") \quad installe le package à partir du cran ou d'un autre dépot (argument \textit{repos})
+\bu\important{install.packages}("package") \quad installe le package à partir du cran ou d'un autre dépot (argument \textit{repos})
 
-\grasindex{library}("package") \quad  charge le package "package" préalablement installé
+\bu\important{library}("package") \quad  charge le package "package" préalablement installé
 
 \grasindex{require}("package") \quad  test si le package "package" peut être chargé, à utiliser en interne dans les fonctions
 

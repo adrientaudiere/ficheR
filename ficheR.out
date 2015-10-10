@@ -1,0 +1,69 @@
+\BOOKMARK [1][-]{section.1}{Formalisme}{}% 1
+\BOOKMARK [1][-]{section.2}{Terminal Linux}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Naviguer dans ses dossiers}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Conna\356tre et agir sur les fichiers}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Conna\356tre et agir sur les programmes}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Conna\356tre et agir sur sa machine}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Conna\356tre et agir sur le contenu des fichiers}{section.2}% 7
+\BOOKMARK [1][-]{section.3}{Quelques fonctions utiles de 'dialogue' avec R}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{R\351pertoire de travail}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Aide et infos sur un \351l\351ment}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.3}{Aide et infos sur une fonction}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.4}{Objet}{section.3}% 12
+\BOOKMARK [1][-]{section.4}{Gestion de donn\351es}{}% 13
+\BOOKMARK [2][-]{subsection.4.1}{input}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.2}{information et gestion de donn\351es}{section.4}% 15
+\BOOKMARK [3][-]{subsubsection.4.2.1}{sur le fichier}{subsection.4.2}% 16
+\BOOKMARK [3][-]{subsubsection.4.2.2}{sur un vecteur}{subsection.4.2}% 17
+\BOOKMARK [3][-]{subsubsection.4.2.3}{sur une matrice}{subsection.4.2}% 18
+\BOOKMARK [3][-]{subsubsection.4.2.4}{sur un dataframe \(df\)}{subsection.4.2}% 19
+\BOOKMARK [3][-]{subsubsection.4.2.5}{sur un facteur}{subsection.4.2}% 20
+\BOOKMARK [3][-]{subsubsection.4.2.6}{sur une liste}{subsection.4.2}% 21
+\BOOKMARK [3][-]{subsubsection.4.2.7}{caract\350res}{subsection.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.3}{output}{section.4}% 23
+\BOOKMARK [1][-]{section.5}{Statistiques}{}% 24
+\BOOKMARK [2][-]{subsection.5.1}{Stats descriptives}{section.5}% 25
+\BOOKMARK [2][-]{subsection.5.2}{Tests statistiques}{section.5}% 26
+\BOOKMARK [2][-]{subsection.5.3}{Mod\350les lin\351aires}{section.5}% 27
+\BOOKMARK [2][-]{subsection.5.4}{Tirage d'une distribution}{section.5}% 28
+\BOOKMARK [1][-]{section.6}{Graphique}{}% 29
+\BOOKMARK [2][-]{subsection.6.1}{G\351n\351ralit\351}{section.6}% 30
+\BOOKMARK [2][-]{subsection.6.2}{diagramme de dispersion}{section.6}% 31
+\BOOKMARK [2][-]{subsection.6.3}{autres graphiques}{section.6}% 32
+\BOOKMARK [2][-]{subsection.6.4}{gestion des couleurs}{section.6}% 33
+\BOOKMARK [2][-]{subsection.6.5}{Personnalisation des graphiques}{section.6}% 34
+\BOOKMARK [2][-]{subsection.6.6}{Galeries graphique sur internet}{section.6}% 35
+\BOOKMARK [1][-]{section.7}{`Programmation'}{}% 36
+\BOOKMARK [2][-]{subsection.7.1}{boucle}{section.7}% 37
+\BOOKMARK [2][-]{subsection.7.2}{Cr\351ation et gestion de fonction}{section.7}% 38
+\BOOKMARK [2][-]{subsection.7.3}{Mod\350le nul}{section.7}% 39
+\BOOKMARK [2][-]{subsection.7.4}{Autres fonctions pour la programmation}{section.7}% 40
+\BOOKMARK [2][-]{subsection.7.5}{La famille apply}{section.7}% 41
+\BOOKMARK [2][-]{subsection.7.6}{Environnement, session et debuggage}{section.7}% 42
+\BOOKMARK [2][-]{subsection.7.7}{Benchmarking et profiling}{section.7}% 43
+\BOOKMARK [1][-]{section.8}{Calcul}{}% 44
+\BOOKMARK [1][-]{section.9}{Condition logique et s\351lection de donn\351es}{}% 45
+\BOOKMARK [1][-]{section.10}{Divers}{}% 46
+\BOOKMARK [1][-]{section.11}{Packages}{}% 47
+\BOOKMARK [2][-]{subsection.11.1}{Gestion des packages}{section.11}% 48
+\BOOKMARK [2][-]{subsection.11.2}{ade4}{section.11}% 49
+\BOOKMARK [3][-]{subsubsection.11.2.1}{Analyses sur un tableau}{subsection.11.2}% 50
+\BOOKMARK [3][-]{subsubsection.11.2.2}{Analyses sur deux tableaux}{subsection.11.2}% 51
+\BOOKMARK [3][-]{subsubsection.11.2.3}{Analyses sur k tableaux}{subsection.11.2}% 52
+\BOOKMARK [2][-]{subsection.11.3}{ape}{section.11}% 53
+\BOOKMARK [2][-]{subsection.11.4}{FactoMineR }{section.11}% 54
+\BOOKMARK [2][-]{subsection.11.5}{picante}{section.11}% 55
+\BOOKMARK [2][-]{subsection.11.6}{spaa}{section.11}% 56
+\BOOKMARK [2][-]{subsection.11.7}{Vegan}{section.11}% 57
+\BOOKMARK [2][-]{subsection.11.8}{diversit\351 fonctionnelle}{section.11}% 58
+\BOOKMARK [2][-]{subsection.11.9}{Analyses spatiales}{section.11}% 59
+\BOOKMARK [2][-]{subsection.11.10}{dplyr}{section.11}% 60
+\BOOKMARK [2][-]{subsection.11.11}{htmltools}{section.11}% 61
+\BOOKMARK [1][-]{section.12}{Document de travail gr\342ce \340 Knitr}{}% 62
+\BOOKMARK [1][-]{section.13}{Liens internet}{}% 63
+\BOOKMARK [2][-]{subsection.13.1}{En fran\347ais}{section.13}% 64
+\BOOKMARK [3][-]{subsubsection.13.1.1}{D\351butant}{subsection.13.1}% 65
+\BOOKMARK [3][-]{subsubsection.13.1.2}{Avanc\351es}{subsection.13.1}% 66
+\BOOKMARK [2][-]{subsection.13.2}{En anglais}{section.13}% 67
+\BOOKMARK [3][-]{subsubsection.13.2.1}{D\351butant}{subsection.13.2}% 68
+\BOOKMARK [3][-]{subsubsection.13.2.2}{Avanc\351es}{subsection.13.2}% 69
