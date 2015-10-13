@@ -14,6 +14,7 @@
 \usepackage{subfigure}        %%%%%format paysage avec\begin{landscape}
 \usepackage{fancyhdr}
 \usepackage[absolute]{textpos} 
+\usepackage[usenames,dvipsnames]{xcolor}
 
 \usepackage{multicol}
 \setlength{\columnseprule}{0.5pt} %%%% ligne de séparation entre les colonnes
@@ -24,7 +25,8 @@
 
 \usepackage{makeidx} 
 \usepackage[hidelinks]{hyperref}
-\hypersetup{linkcolor=black, colorlinks=TRUE, urlcolor=cyan }
+\colorlet{DarkMidnightBlue}{MidnightBlue!70!black}
+\hypersetup{linkcolor=DarkMidnightBlue, colorlinks=TRUE, urlcolor=MidnightBlue }
 
 \hypersetup{
 pdftitle = {Fiche de commande R},
@@ -82,7 +84,7 @@ pdfcreator = {\LaTeX\ with package \flqq hyperref\frqq},
 
 %%Version simple ou avancée %%
 \newif\ifadvanced
-\advancedtrue  % set \advancedtrue pour la fiche avancée \advancedfalse pour la fiche simple
+\advancedfalse % set \advancedtrue pour la fiche avancée \advancedfalse pour la fiche simple
 
 \makeindex
 \newcommand{\grasindex}[1]{\textbf{#1} \index{#1\textbf}}
@@ -120,7 +122,7 @@ pdfcreator = {\LaTeX\ with package \flqq hyperref\frqq},
 
 \section{Formalisme} 
 
-\ifadvanced \else Les $\bigstar$ indiquent les 50 functions les plus importantes pour débuter. \fi
+\ifadvanced \else Les $\bigstar$ indiquent les 50 fonctions les plus importantes pour débuter. \fi
 
 \textbf{a} et \textbf{b} sont des matrices (\grasindex{matrix}() pour 2 dimensions ou bien des \grasindex{array}() pour plus de 2 dimensions)
 
@@ -196,11 +198,11 @@ pdfcreator = {\LaTeX\ with package \flqq hyperref\frqq},
 
 \section{Quelques fonctions utiles de 'dialogue' avec R}
 
-R contient plusieurs types d'objets qui appartiennent à des classes\ref{class} et des modes\ref{mode} différents. Pour plus d'informations: le site \href{http://r-pkgs.had.co.nz/}{R advanced} d'Hadley Wickham.
+R contient plusieurs types d'objets qui appartiennent à des \hyperref[class]{classes} et des \hyperref[mode]{modes} différents. Pour plus d'informations: le site \href{http://r-pkgs.had.co.nz/}{R advanced} d'Hadley Wickham.
 
 \subsection{Répertoire de travail}
 
-Le répertoire de travail est différent de les environnements\ref{EnvSesDeb} de R. 
+Le répertoire de travail est différent de les \hyperref[EnvSesDeb]{environnements} de R. 
 
 \grasindex{getwd}() \quad demande le répertoire de travail actuel
 

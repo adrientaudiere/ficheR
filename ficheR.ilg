@@ -1,14 +1,14 @@
-This is makeindex, version 2.15 [TeX Live 2015/dev] (kpathsea + Thai support).
+This is makeindex, version 2.15 [MiKTeX 2.9 64-bit] (kpathsea + Thai support).
 Scanning input file ficheR.idx....
-!! Input index error (file = ficheR.idx, line = 73):
+!! Input index error (file = ficheR.idx, line = 67):
    -- Illegal null field.
 
-!! Input index error (file = ficheR.idx, line = 320):
+!! Input index error (file = ficheR.idx, line = 247):
    -- Illegal null field.
-!! Input index error (file = ficheR.idx, line = 321):
+!! Input index error (file = ficheR.idx, line = 248):
    -- Illegal null field.
-done (372 entries accepted, 3 rejected).
-Sorting entries......done (3247 comparisons).
-Generating output file ficheR.ind....done (411 lines written, 0 warnings).
+done (250 entries accepted, 3 rejected).
+Sorting entries.....done (2137 comparisons).
+Generating output file ficheR.ind....done (299 lines written, 0 warnings).
 Output written in ficheR.ind.
 Transcript written in ficheR.ilg.
