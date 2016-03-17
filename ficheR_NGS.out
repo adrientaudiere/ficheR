@@ -1,0 +1,16 @@
+\BOOKMARK [1][-]{section.1}{Formalisme}{}% 1
+\BOOKMARK [1][-]{section.2}{Importation et gestion des donn\351es avec le package phyloseq}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Importation}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Gestion des objets de classe phyloseq}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Construction d'un arbre phylog\351n\351tique \340 partir des s\351quences de r\351f\351rences}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Exploration simple des donn\351es}{}% 6
+\BOOKMARK [1][-]{section.4}{Diversit\351 alpha}{}% 7
+\BOOKMARK [1][-]{section.5}{Diversit\351 beta}{}% 8
+\BOOKMARK [2][-]{subsection.5.1}{Figures}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.2}{Ordinations}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.3}{Permanova}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.4}{Abondance diff\351rentielle des OTUs}{section.5}% 12
+\BOOKMARK [3][-]{subsubsection.5.4.1}{Package DESeq2}{subsection.5.4}% 13
+\BOOKMARK [3][-]{subsubsection.5.4.2}{Package edgeR}{subsection.5.4}% 14
+\BOOKMARK [3][-]{subsubsection.5.4.3}{Package multtest}{subsection.5.4}% 15
+\BOOKMARK [3][-]{subsubsection.5.4.4}{Package mvabund}{subsection.5.4}% 16

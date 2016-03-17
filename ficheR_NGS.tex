@@ -1,0 +1,254 @@
+\documentclass[11, a4paper, landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} 
+\usepackage[frenchb]{babel} 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[pdftex]{graphicx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{fullpage}
+\usepackage{textcomp}
+\usepackage{lscape}  
+\usepackage{subfigure}        %%%%%format paysage avec\begin{landscape}
+\usepackage{fancyhdr}
+\usepackage[absolute]{textpos} 
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage{multicol}
+\setlength{\columnseprule}{0.5pt} %%%% ligne de séparation entre les colonnes
+\setlength{\columnsep}{25pt} %%%% séparation entre colonnes
+
+\usepackage{geometry}
+\geometry{left=0.8cm, bottom=1.3cm, top=0.5cm, right=0.8cm}
+
+\usepackage{makeidx} 
+\usepackage[hidelinks]{hyperref}
+\colorlet{DarkMidnightBlue}{MidnightBlue!70!black}
+\hypersetup{linkcolor=DarkMidnightBlue, colorlinks=TRUE, urlcolor=MidnightBlue }
+
+\hypersetup{
+pdftitle = {Fiche de commande R pour l'analyse de communauté via des méthodes NGS},
+pdfsubject = {Fiche de commande R pour les NGS},
+pdfkeywords = {R, ecologie, NGS},
+pdfauthor = {\textcopyright\ Adrien Taudiere},
+pdfcreator = {\LaTeX\ with package \flqq hyperref\frqq},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% mise en page de l'index%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multicol}
+\makeatletter
+\renewenvironment{theindex}
+	{\if@twocolumn
+    	\@restonecolfalse
+       	\else
+          \@restonecoltrue
+       \fi
+       \setlength{\columnseprule}{0pt}
+       \setlength{\columnsep}{35pt}
+      \begin{multicols*}{5}[\section*{\indexname}]
+       \markboth{\MakeUppercase\indexname}%
+                {\MakeUppercase\indexname}%
+       \thispagestyle{plain}
+       \setlength{\parindent}{0pt}
+       \setlength{\parskip}{0pt plus 0.3pt}
+       \relax
+       \let\item\@idxitem}%
+    {\end{multicols*}\if@restonecol\onecolumn\else\clearpage\fi}
+\makeatother
+
+\makeatletter
+\renewcommand\@idxitem{\par\hangindent 40\p@}
+\renewcommand\subitem{\@idxitem \hspace*{20\p@}}
+\renewcommand\subsubitem{\@idxitem \hspace*{30\p@}}
+\renewcommand\indexspace{\par \vskip 10\p@ \@plus5\p@ \@minus3\p@\relax}
+
+\renewcommand{\contentsname}{Table des Matières}
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+	{-3.5ex \@plus -1ex \@minus -.2ex}%
+	{2.3ex}%
+	{\reset@font\Large\bfseries}}
+	
+
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% mise en page de l'index%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\makeindex
+\newcommand{\grasindex}[1]{\textbf{#1} \index{#1\textbf}}
+\newcommand{\bu}[0]{\ifadvanced \else \hspace*{-1mm}$\bigstar$ \hspace*{0.15mm}\fi}
+\newcommand{\adv}[1]{\ifadvanced #1 \fi}
+
+
+
+
+\author{\textbf{Adrien Taudiere}}
+\title{Fiche de commande R}
+
+\date\today
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page de garde %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{multicols*}{3}
+
+\maketitle
+
+\tableofcontents
+\rule{8cm}{1.5pt}
+
+\setlength{\parindent}{-0.3cm}
+
+\section{Formalisme} 
+
+\textbf{a} et \textbf{b} sont des matrices (\grasindex{matrix}() pour 2 dimensions ou bien des \grasindex{array}() pour plus de 2 dimensions)
+
+\textbf{X} et \textbf{Y} sont des vecteurs (\grasindex{vector}())
+
+\textbf{x} et \textbf{y} sont des nombres 
+
+\textbf{liste} est une liste c'est à dire une groupe d'objet pouvant être différents (\grasindex{list}())
+
+\textbf{fact} est un facteur (\grasindex{factor}())
+
+\textbf{df} est un data.frame (liste d'éléments de même longueur; \grasindex{data.frame}()) 
+
+\textbf{\textbar{}} correspond à 'ou' dans R et dans cette fiche 
+
+\textbf{m} est un modèle
+
+\textbf{obj} est un objet quelconques
+
+\textbf{T} = TRUE; \textbf{F} = FALSE
+
+\textbf{élt} élément
+
+\textbf{ddl} degré de liberté
+
+\textbf{µ} moyenne
+
+\textbf{physeq} object de classe phyloseq
+
+\textbf{cond} condition
+
+
+\section{Importation et gestion des données avec le package phyloseq}
+
+
+\subsection{Importation}
+
+\grasindex{import\_biom}()
+
+\grasindex{import\_qiime}()
+
+\grasindex{merge\_phyloseq}()
+
+
+\subsection{Gestion des objets de classe phyloseq}
+
+\grasindex{prune\_samples}(physeq, cond)
+
+\grasindex{prune\_taxa}(physeq, cond)
+
+
+\subsection{Construction d'un arbre phylogénétique à partir des séquences de références}
+
+\grasindex{AlignSeqs}(\grasindex{as.DNAbin}(physeq@refseqs))
+
+\grasindex{StaggerAlignment}
+
+\grasindex{BrowseSeqs}
+
+\grasindex{DistanceMatrix}
+
+\grasindex{upgma} \grasindex{NJ}
+
+\section{Exploration simple des données}
+
+\grasindex{sample\_sums}(physeq)
+
+\grasindex{taxa\_sums}(physeq)
+
+
+\grasindex{sankey\_phyloseq}(physeq)
+
+\grasindex{treemap}(df)
+
+\section{Diversité alpha}
+
+\grasindex{plot\_richness}(physeq)
+
+\grasindex{accu\_plot}(physeq)
+
+\grasindex{renyi}(physeq, hill = T) On peut utiliser les nombres de Hill dans un modèle linéaire \grasindex{lm}
+
+\section{Diversité beta}
+
+\subsection{Figures}
+
+\grasindex{venn\_phyloseq}(physeq) Voire les alternatives moins clefs en main : \grasindex{venneuler} du package éponyme et \grasindex{venn.plot} du package \grasindex{VennDiagram}
+
+\grasindex{plot\_net}
+
+\grasindex{plot\_heatmap}
+
+\grasindex{otu\_circle}
+
+
+\subsection{Ordinations}
+
+\grasindex{ordinate}(physeq) La fonction graphique associés est \grasindex{plot\_ordination}.
+
+\subsection{Permanova}
+
+\grasindex{adonis}(physeq@otu\_table) Package \grasindex{vegan}
+
+
+
+\subsection{Abondance différentielle des OTUs}
+
+	\subsubsection{Package DESeq2}
+
+\grasindex{phyloseq\_to\_deseq2}
+
+\grasindex{DESeq2}
+
+\grasindex{results}
+
+\grasindex{plot\_deseq2\_phyloseq}
+
+	\subsubsection{Package edgeR}
+
+\grasindex{plot\_edgeR\_phyloseq}
+
+	\subsubsection{Package multtest}
+
+\grasindex{mt}
+
+\grasindex{plot\_mt}
+
+	\subsubsection{Package mvabund}
+
+\grasindex{manyglm}
+
+\grasindex{anova.manyglm}
+
+\grasindex{summary.manyglm}
+
+
+
+
+
+\end{multicols*}
+
+\printindex
+\addcontentsline{toc}{subsection}{Index}
+
+
+\end{document}
